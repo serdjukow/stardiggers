@@ -1,0 +1,142 @@
+.button-modal {
+	position: relative;
+	cursor: pointer;
+	user-select: none;
+	&::before {
+		position: absolute;
+		content: '';
+		display: block;
+		width: 0.5px;
+		height: 19px;
+		left: -2px;
+		bottom: -3px;
+		background: #ffffff;
+	}
+
+	&__decor {
+		position: absolute;
+		display: inline-block;
+		width: 18px;
+		height: 3px;
+		left: 0;
+		bottom: -3px;
+		background: #ffffff;
+		&::before {
+			position: absolute;
+			content: '';
+			display: inline-block;
+			width: 26px;
+			height: 0.5px;
+			left: 100%;
+			top: 50%;
+			transform: translateY(-50%);
+			background: #ffffff;
+		}
+	}
+
+	&__border {
+		border: 1px solid #ffffff;
+		padding: 4px;
+		&::before {
+			position: absolute;
+			content: '';
+			display: block;
+			height: 27.77px;
+			width: 4.76px;
+			left: 0;
+			top: 0;
+			background: #ffffff;
+		}
+		&::after {
+			position: absolute;
+			content: '';
+			display: block;
+			width: 19px;
+			height: 3px;
+			left: 56px;
+			top: -2.2px;
+			background: #ffffff;
+		}
+	}
+	&__border {
+		border: 1px solid #ffffff;
+		padding: 4px;
+		&::before {
+			position: absolute;
+			content: '';
+			display: block;
+			height: 19px;
+			width: 3px;
+			left: 0;
+			top: 0;
+			background: #ffffff;
+		}
+		&::after {
+			position: absolute;
+			content: '';
+			display: block;
+			width: 31px;
+			height: 3px;
+			left: 56px;
+			top: -1.1px;
+			background: #ffffff;
+		}
+	}
+	&__item {
+		font-family: 'Jura';
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 24px;
+		color: #ffffff;
+		white-space: nowrap;
+		text-shadow: 0px 5px 4px rgba(0, 0, 0, 0.5);
+		border: 1px solid #ffffff;
+		padding: 8px 33px;
+		background-image: url('../../../assets/images/button-modal-bg.png');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		transition: background-image 0.25s;
+		position: relative;
+		overflow: hidden;
+		cursor: pointer;
+		&::before {
+			position: absolute;
+			top: -45%;
+			left: -90px;
+			content: '';
+			display: block;
+			width: 53.84px;
+			height: 80.75px;
+			background: rgba(215, 187, 88, 1);
+			filter: blur(15px);
+			transform: rotate(52.19deg);
+			transition: left 0.9s ease-in;
+			z-index: 0;
+		}
+		&:disabled {
+			color: rgba(171, 171, 171, 0.699);			
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				&::before {
+					animation: moving 1.7s ease infinite;
+				}
+			}
+		}
+		@keyframes moving {
+			0% {
+				left: -90px;
+			}
+			100% {
+				left: 110%;
+			}
+		}
+	}
+	&__text {
+		display: block;
+		position: relative;
+		z-index: 1;
+		white-space: nowrap;
+	}
+}

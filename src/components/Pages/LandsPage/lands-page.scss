@@ -1,0 +1,99 @@
+.lands-page {
+	position: relative;
+	width: 100%;
+	&__body {
+		position: relative;
+		max-width: 1060px;
+		width: 100%;
+		padding: 43px 0 70px;
+		margin: 0 auto;
+		@media (max-width: 991.98px) {
+			max-width: calc(2vw * 35.5);
+		}
+		@media (max-width: 767.98px) {
+			max-width: calc(2vw * 45.5);
+		}
+	}
+}
+
+.lands-mobile-slider {
+	position: relative;
+	overflow: hidden;
+	max-width: 1130px;
+	margin-bottom: 30px;
+	&__slide {
+		overflow: hidden;
+		padding: 4px;
+		&::before,
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			width: 4px;
+			height: 45px;
+			background-color: #dcf0ff;
+		}
+		&::before {
+			top: 4px;
+			left: 1px;
+		}
+		&::after {
+			top: 4px;
+			right: 1px;
+		}
+	}
+	&__body {
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: relative;
+		padding-bottom: 91.29129129129129%;
+		overflow: visible;
+		border: 3px solid #dcf0ff;
+		&::before,
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			width: 4px;
+			height: 45px;
+			background-color: #dcf0ff;
+		}
+		&::before {
+			bottom: -3px;
+			left: -7px;
+		}
+		&::after {
+			bottom: -3px;
+			right: -7px;
+		}
+	}
+	&__slide-decor {
+		display: block;
+		position: absolute;
+		left: 50%;
+		top: -5.5px;
+		transform: translateX(-50%);
+		width: 40%;
+		height: 3px;
+		background: #dcf0ff;
+		z-index: 2;
+	}
+}
+
+.lands-page-prev,
+.lands-page-next {
+	background-color: transparent;
+	border: none;
+	width: 11px;
+	height: 22px;
+	background-image: url('../../../assets/images/icons/arr-left.svg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	&.swiper-button-disabled {
+		opacity: 0.3;
+	}
+}
+.lands-page-next {
+	transform: rotate(-180deg);
+}

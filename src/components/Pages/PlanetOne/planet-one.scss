@@ -1,0 +1,354 @@
+.planet-one-page {
+	position: relative;
+	&__body {
+		max-width: 1060px;
+		padding: 43px 0 70px;
+		width: 100%;
+		padding: 43px 0 70px;
+		margin: 0 auto;
+		@media (max-width: 991.98px) {
+			max-width: calc(2vw * 35.5);
+		}
+		@media (max-width: 767.98px) {
+			max-width: calc(2vw * 45.5);
+		}
+	}
+	&__info-items {
+		display: flex;
+		flex-direction: column;
+		gap: calc(2vw * 2);
+	}
+}
+
+.planet-one-slide {
+	background-image: url('../../../assets/images/bg1.jpg');
+	&__body {
+		width: 787px;
+		height: 100%;
+		position: relative;
+	}
+	&__planet {
+		position: absolute;
+
+		img {
+			position: absolute;
+			width: 100%;
+			object-fit: cover;
+		}
+
+		&.green {
+			left: 7%;
+			bottom: 0;
+			width: 510px;
+			height: 329px;
+			.planet-mask {
+				right: 26%;
+				top: 27%;
+				width: 121px;
+				height: 110px;
+				background-image: url('../../../assets/images/planetfull_mask_1.png');
+			}
+			.hint-1 {
+				width: 370px;
+				height: 120px;
+				background-image: url('../../../assets/images/planetone_green_hint1.png');
+				top: -28%;
+				left: -6%;
+				.planet-one-slide__hint-info {
+					max-width: 198px;
+					margin-left: 15px;
+					margin-top: 5px;
+				}
+			}
+			.hint-2 {
+				width: 380px;
+				height: 109px;
+				background-image: url('../../../assets/images/planetone_green_hint2.png');
+				top: 47%;
+				right: 35%;
+				.planet-one-slide__hint-info {
+					max-width: 240px;
+					margin-top: 15px;
+					margin-left: 20px;
+				}
+			}
+		}
+
+		&.yellow {
+			left: 0;
+			bottom: 0;
+			width: 597px;
+			height: 368px;
+			.planet-mask {
+				right: 26%;
+				top: 15%;
+				width: 124px;
+				height: 197px;
+				background-image: url('../../../assets/images/planetfull_mask_2.png');
+			}
+			.hint-1 {
+				width: 300px;
+				height: 150px;
+				background-image: url('../../../assets/images/planetone_yellow_hint1.png');
+				top: -13%;
+				left: 2%;
+				.planet-one-slide__hint-info {
+					max-width: 172px;
+					margin-left: 15px;
+				}
+			}
+			.hint-2 {
+				justify-content: flex-end;
+				width: 257px;
+				height: 147px;
+				background-image: url('../../../assets/images/planetone_yellow_hint2.png');
+				top: 19%;
+				right: -27%;
+				.planet-one-slide__hint-info {
+					max-width: 137px;
+					margin-top: 10px;
+					margin-right: 20px;
+				}
+			}
+			.hint-3 {
+				width: 388px;
+				height: 158px;
+				background-image: url('../../../assets/images/planetone_yellow_hint3.png');
+				top: 48%;
+				right: 33%;
+				.planet-one-slide__hint-info {
+					align-self: flex-end;
+					max-width: 233px;
+					margin-left: 15px;
+					margin-bottom: 5px;
+				}
+			}
+		}
+		&.blue {
+			left: 0;
+			bottom: 0;
+			width: 518px;
+			height: 359px;
+			.planet-mask {
+				right: 42%;
+				top: 4%;
+				width: 135px;
+				height: 154px;
+				background-image: url('../../../assets/images/planetfull_mask_3.png');
+			}
+			.hint-1 {
+				width: 220px;
+				height: 167px;
+				background-image: url('../../../assets/images/planetone_blue_hint1.png');
+				top: -30%;
+				left: 9%;
+				.planet-one-slide__hint-info {
+					max-width: 172px;
+					margin-left: 15px;
+				}
+			}
+			.hint-2 {
+				justify-content: flex-end;
+				width: 371px;
+				height: 156px;
+				background-image: url('../../../assets/images/planetone_blue_hint2.png');
+				top: -12%;
+				right: -38%;
+				.planet-one-slide__hint-info {
+					max-width: 233px;
+					margin-right: 40px;
+				}
+			}
+			.hint-3 {
+				justify-content: flex-end;
+				width: 413px;
+				height: 109px;
+				background-image: url('../../../assets/images/planetone_blue_hint3.png');
+				top: 56%;
+				left: 45%;
+				.planet-one-slide__hint-info {
+					max-width: 233px;
+					margin-right: 42px;
+					margin-top: 14px;
+				}
+			}
+		}
+	}
+
+	&__hint {
+		position: absolute;
+		z-index: 2;
+		display: flex;
+	}
+	&__hint-info {
+		color: #fff;
+		padding: 15px;
+		transition: color 0.25s ease;
+		h5 {
+			font-weight: 700;
+			font-size: 12px;
+			line-height: 14px;
+			margin: 0;
+			margin-bottom: 6px;
+		}
+		p {
+			font-weight: 500;
+			font-size: 10px;
+			line-height: 12px;
+			margin: 0;
+		}
+	}
+
+	.planet-mask {
+		position: absolute;
+		display: block;
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+		z-index: 1;
+		cursor: pointer;
+		transition: opacity 0.25s ease;
+		&:hover {
+			opacity: 0;
+			& > .planet-one-slide__hint {
+				opacity: 0;
+			}
+		}
+	}
+}
+
+.planet-one-mobile-slider {
+	position: relative;
+	overflow: hidden;
+	max-width: 1130px;
+	margin-bottom: 30px;
+	&__slide {
+		overflow: hidden;
+		padding: 4px;
+		&::before,
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			width: 4px;
+			height: 45px;
+			background-color: #dcf0ff;
+		}
+		&::before {
+			top: 4px;
+			left: 1px;
+		}
+		&::after {
+			top: 4px;
+			right: 1px;
+		}
+	}
+	&__body {
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: relative;
+		padding-bottom: 76.90054153227%;
+		overflow: visible;
+		border: 3px solid #dcf0ff;
+		&::before,
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			width: 4px;
+			height: 45px;
+			background-color: #dcf0ff;
+			
+		}
+		&::before {
+			bottom: -3px;
+			left: -7px;
+		}
+		&::after {
+			bottom: -3px;
+			right: -7px;
+		}
+	}
+	&__slide-decor {
+		display: block;
+		position: absolute;
+		left: 50%;
+		top: -5.5px;
+		transform: translateX(-50%);
+		width: 40%;
+		height: 3px;
+		background: #dcf0ff;
+		z-index: 2;
+	}
+	&__planet {
+		position: absolute;
+		z-index: 1;
+		bottom: 0;
+		left: 0;
+		width: 80%;
+		img {
+			display: block;
+			width: 100%;
+		}
+	}
+}
+
+.planet-one-page-prev,
+.planet-one-page-next {
+	background-color: transparent;
+	border: none;
+	width: 11px;
+	height: 22px;
+	background-image: url('../../../assets/images/icons/arr-left.svg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	&.swiper-button-disabled {
+		opacity: 0.3;
+	}
+}
+.planet-one-page-next {
+	transform: rotate(-180deg);
+}
+
+.planet-one-info-item {
+	display: flex;
+	flex-direction: column;
+	background: rgba(217, 217, 217, 0.2);
+	border: 1px solid #d9d9d9;
+	border-radius: 30px;
+	color: #ffffff;
+	padding: 13px 18px 16px;
+	max-width: 287px;
+	margin: 0 auto;
+	&__title {
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 21px;
+		margin: 0 0 12px;
+	}
+	&__text {
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 19px;
+		margin: 0;
+		&:not(:last-child) {
+			margin: 0 0 27px;
+		}
+	}
+	&__link {
+		display: inline-block;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 19px;
+		text-shadow: 4px 4px 7px rgba(0, 0, 0, 0.5);
+		background: rgba(0, 255, 255, 0.1);
+		border: 1px solid #d3ffff;
+		border-radius: 13px;
+		color: #ffffff;
+		text-decoration: none;
+		text-transform: uppercase;
+		padding: 10px 18px;
+		margin: 0 auto;
+	}
+}

@@ -1,0 +1,139 @@
+.identification-page {
+	position: relative;
+	&__content {
+		min-height: calc(100vh - 160px);
+		padding: 0 15px 80px;
+		max-width: 1338px;
+		margin: 0 auto;
+		&.content-timer {
+			max-width: 840px;
+		}
+	}
+
+	&__body {
+		position: relative;
+		width: 100%;
+		margin: 0 auto;
+		padding-bottom: 59.9388379204893%;
+		background-image: url('../../../assets/images/identification-full.png');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		color: #fff;
+		&.body-timer {
+			padding-bottom: 94.5679012345679%;
+			background-image: url('../../../assets/images/identification.png');
+		}
+	}
+	&__items {
+		max-width: 200px;
+		padding: 0 10px;
+	}
+	&__item {
+		font-weight: 500;
+		font-size: 21px;
+		line-height: 23px;
+	}
+
+	&__counter {
+		font-weight: 600;
+		font-size: 31px;
+		line-height: 35px;
+		position: absolute;
+		top: 50%;
+		left: 37.5%;
+		transform: translateY(-50%);
+		width: 230px;
+		text-align: center;
+	}
+
+	&__button-container {
+		display: flex;
+		justify-content: flex-end;
+		margin-top: -110px;
+	}
+	.identification-quests {
+		position: absolute;
+		top: 52%;
+		left: 8%;
+	}
+	.identification-rewards {
+		position: absolute;
+		top: 17%;
+		left: 82%;
+	}
+}
+
+.countdown {
+	text-transform: uppercase;
+	user-select: none;
+	&__days {
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+		gap: 15px;
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+	&__days-number {
+		position: relative;
+		font-family: 'Jockey One';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 68px;
+		line-height: 68px;
+		color: #fff;
+		&::after {
+			position: absolute;
+			bottom: 6px;
+			right: -45px;
+			content: 'DAYS';
+			font-family: 'Jura';
+			font-style: normal;
+			font-weight: 600;
+			font-size: 14px;
+			line-height: 14px;
+			color: #d3ffff;
+		}
+	}
+	&__days-text {
+		font-style: normal;
+		font-weight: 600;
+		font-size: 14px;
+		line-height: 14px;
+		color: #d3ffff;
+
+		margin-bottom: 6px;
+	}
+	&__items {
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		gap: 8px;
+	}
+	&__item {
+		min-width: 48px;
+	}
+	&__item-number {
+		font-family: 'Jockey One';
+		font-weight: 400;
+		font-size: 48px;
+		line-height: 48px;
+		margin-bottom: 6px;
+		text-align: center;
+	}
+	&__item-text {
+		font-weight: 500;
+		font-size: 10px;
+		line-height: 12px;
+		color: #d3ffff;
+	}
+	&__separator {
+		font-family: 'Jockey One';
+		font-weight: 400;
+		font-size: 48px;
+		display: flex;
+		align-self: flex-start;
+		height: 48px;
+	}
+}

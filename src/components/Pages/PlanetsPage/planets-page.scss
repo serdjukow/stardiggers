@@ -1,0 +1,263 @@
+.planets-page {
+	&__body {
+		position: relative;
+		max-width: 1242px;
+		margin: 70px auto 70px;
+		@media (max-width: 991.98px) {
+			max-width: calc(2vw * 35.5);
+		}
+		@media (max-width: 767.98px) {
+			max-width: calc(2vw * 45.5);
+		}
+	}
+	&__content {
+		width: 100%;
+	}
+}
+.planets-body {
+	position: relative;
+	max-width: 1242px;
+	min-height: 650px;
+	&__planet {
+		position: absolute;
+		opacity: 0.7;
+		cursor: pointer;
+		border-radius: 50%;
+		transition: color 0.25s ease, opacity 0.25s ease;
+		img {
+			position: absolute;
+			width: 100%;
+			object-fit: cover;
+			border-radius: 50%;
+		}
+		&:hover {
+			opacity: 1;
+			.planets-body__hint-info {
+				color: #ffffff;
+			}
+		}
+	}
+
+	.planet-1 {
+		top: 0;
+		left: 2%;
+		width: 200px;
+		height: 200px;
+	}
+	.planet-2 {
+		width: 280px;
+		height: 280px;
+		bottom: 14%;
+		left: 40%;
+	}
+
+	.planet-3 {
+		width: 250px;
+		height: 250px;
+		bottom: 19%;
+		right: 0%;
+	}
+
+	&__hint {
+		display: flex;
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		position: absolute;
+	}
+
+	&__hint-info {
+		color: #787878;
+		padding: 20px;
+		transition: color 0.25s ease;
+		h5 {
+			font-weight: 700;
+			font-size: 16px;
+			line-height: 19px;
+			margin: 0;
+			margin-bottom: 10px;
+		}
+		p {
+			font-weight: 500;
+			font-size: 14px;
+			line-height: 17px;
+			margin: 0;
+		}
+	}
+
+	.hint-1 {
+		justify-content: flex-end;
+		width: 372px;
+		height: 133px;
+		background-image: url('../../../assets/images/planetfull_hint1.png');
+		top: -8%;
+		right: -150%;
+		.planets-body__hint-info {
+			max-width: 280px;
+		}
+	}
+	.hint-2 {
+		width: 552px;
+		height: 139px;
+		background-image: url('../../../assets/images/planetfull_hint2.png');
+		top: 77%;
+		right: 51%;
+		.planets-body__hint-info {
+			max-width: 370px;
+			margin-left: 20px;
+		}
+	}
+	.hint-3 {
+		width: 307px;
+		height: 301px;
+		background-image: url('../../../assets/images/planetfull_hint3.png');
+		top: -68%;
+		right: 64%;
+		.planets-body__hint-info {
+			max-width: 280px;
+			margin-top: 5px;
+			margin-left: 16px;
+			max-height: 140px;
+		}
+	}
+}
+.planets-page-mobile__body {
+
+}
+
+.planets-mobile-slider {
+	position: relative;
+	overflow: hidden;
+	max-width: 1130px;
+	margin-bottom: 30px;
+	&__slide {
+		overflow: hidden;
+		padding: 4px;
+		&::before,
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			width: 4px;
+			height: 45px;
+			background-color: #dcf0ff;
+		}
+		&::before {
+			top: 4px;
+			left: 1px;
+		}
+		&::after {
+			top: 4px;
+			right: 1px;
+		}
+	}
+	&__body {
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: relative;
+		padding-bottom: 76.90054153227%;
+		overflow: visible;
+		border: 3px solid #dcf0ff;
+		&::before,
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			width: 4px;
+			height: 45px;
+			background-color: #dcf0ff;
+			
+		}
+		&::before {
+			bottom: -3px;
+			left: -7px;
+		}
+		&::after {
+			bottom: -3px;
+			right: -7px;
+		}
+	}
+	&__slide-decor {
+		display: block;
+		position: absolute;
+		left: 50%;
+		top: -5.5px;
+		transform: translateX(-50%);
+		width: 40%;
+		height: 3px;
+		background: #dcf0ff;
+		z-index: 2;
+	}
+	&__planet {
+		position: absolute;
+		z-index: 1;
+		bottom: 50%;
+		left: 50%;
+		width: 65%;
+		transform: translate(-50%, 50%);
+		img {
+			display: block;
+			width: 100%;
+		}
+	}
+}
+
+.planets-page-prev,
+.planets-page-next {
+	background-color: transparent;
+	border: none;
+	width: 11px;
+	height: 22px;
+	background-image: url('../../../assets/images/icons/arr-left.svg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	&.swiper-button-disabled {
+		opacity: 0.3;
+	}
+}
+.planets-page-next {
+	transform: rotate(-180deg);
+}
+
+.planets-info-item {
+	display: flex;
+	flex-direction: column;
+	background: rgba(217, 217, 217, 0.2);
+	border: 1px solid #d9d9d9;
+	border-radius: 30px;
+	color: #ffffff;
+	padding: 13px 18px 16px;
+	max-width: 287px;
+	margin: 0 auto;
+	&__title {
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 21px;
+		margin: 0 0 12px;
+	}
+	&__text {
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 19px;
+		margin: 0;
+		&:not(:last-child) {
+			margin: 0 0 27px;
+		}
+	}
+	&__link {
+		display: inline-block;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 19px;
+		text-shadow: 4px 4px 7px rgba(0, 0, 0, 0.5);
+		background: rgba(0, 255, 255, 0.1);
+		border: 1px solid #d3ffff;
+		border-radius: 13px;
+		color: #ffffff;
+		text-decoration: none;
+		text-transform: uppercase;
+		padding: 10px 18px;
+		margin: 0 auto;
+	}
+}

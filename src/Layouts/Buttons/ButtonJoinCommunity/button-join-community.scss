@@ -1,0 +1,28 @@
+.button-join-community {
+	display: block;
+	font-family: 'Jockey One';
+	font-weight: 400;
+	font-size: 22px;
+	line-height: 31px;
+	text-align: center;
+	color: #ffffff;
+	padding: 30px 78px;
+	margin: 0 auto;
+	background-image: url('../../../assets/images/button_blue_bg.png');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	overflow: visible;
+	transition: color 0.25s ease;
+	user-select: none;
+	@media (any-hover: hover) {
+		&:hover {
+			color: #616161;
+		}
+	}
+	@media (max-width: 991.98px) {
+	}
+}

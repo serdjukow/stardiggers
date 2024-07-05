@@ -1,0 +1,79 @@
+@import-normalize;
+
+/* Illegal Curves 700  */
+@font-face {
+	font-family: 'SD Illegal Curves';
+	font-style: normal;
+	font-weight: 700;
+	src: local(''), url('assets/fonts/illegal_curves_bold.woff2') format('woff2');
+}
+
+/* Jockey One 400 - latin */
+@font-face {
+	font-family: 'Jockey One';
+	font-style: normal;
+	font-weight: 400;
+	src: local(''), url('assets/fonts/jockey-one-v15-latin-regular.woff2') format('woff2');
+}
+
+/* jura-300 - latin */
+@font-face {
+	font-family: 'Jura';
+	font-style: normal;
+	font-weight: 300;
+	src: local(''), url('assets/fonts/jura-v24-latin-300.woff2') format('woff2');
+}
+/* jura-regular - latin */
+@font-face {
+	font-family: 'Jura';
+	font-style: normal;
+	font-weight: 400;
+	src: local(''), url('assets/fonts/jura-v24-latin-regular.woff2') format('woff2');
+}
+/* jura-500 - latin */
+@font-face {
+	font-family: 'Jura';
+	font-style: normal;
+	font-weight: 500;
+	src: local(''), url('assets/fonts/jura-v24-latin-500.woff2') format('woff2');
+}
+/* jura-600 - latin */
+@font-face {
+	font-family: 'Jura';
+	font-style: normal;
+	font-weight: 600;
+	src: local(''), url('assets/fonts/jura-v24-latin-600.woff2') format('woff2');
+}
+/* jura-700 - latin */
+@font-face {
+	font-family: 'Jura';
+	font-style: normal;
+	font-weight: 700;
+	src: local(''), url('assets/fonts/jura-v24-latin-700.woff2') format('woff2'); /* Legacy iOS */
+}
+
+* {
+	box-sizing: border-box;
+}
+body,
+html {
+	font-family: 'Jura';
+	margin: 0;
+}
+
+html[data-overlayscrollbars] > body._lock {
+	overflow: hidden !important;
+}
+html[data-overlayscrollbars-overflow-y='scroll']:has(> body._lock) {
+	overflow-y: hidden !important;
+}
+
+body._lock {
+	overflow: hidden !important;
+}
+
+.button {
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+}

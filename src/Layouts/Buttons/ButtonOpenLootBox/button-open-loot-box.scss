@@ -1,0 +1,29 @@
+.button-open-loot-box {
+	display: block;
+	font-family: 'Jura';
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 28px;
+	color: #ffffff;
+	text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+	padding: 34px 69px;
+	background-image: url('../../../assets/images/button_loot_box.png');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	overflow: visible;
+	transition: color 0.25s ease;
+	z-index: 2;
+	min-width: 307px;
+	user-select: none;
+	@media (any-hover: hover) {
+		&:hover {
+			color: #383838;
+		}
+	}
+	@media (max-width: 991.98px) {
+	}
+}

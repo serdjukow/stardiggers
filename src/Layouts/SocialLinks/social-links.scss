@@ -1,0 +1,44 @@
+.social {
+	position: fixed;
+	right: 35px;
+	bottom: 43px;
+	display: flex;
+	gap: 10px;
+	z-index: 50;
+	&__link {
+		display: block;
+		width: 40px;
+		height: 40px;
+		border-radius: 9px;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		opacity: 0.25;
+		transition: opacity 0.25s;
+		@media (any-hover: hover) {
+			&:hover {
+				opacity: 1;
+			}
+		}
+		@media (max-width: 991.98px) {
+			width: 35px;
+			height: 35px;
+			right: 18px;
+			bottom: 25px;
+		}
+	}
+	&.white {
+		.social__link {
+			opacity: 1;
+		}
+		
+	}
+
+	.discord {
+		background-image: url('./../../assets/images/icons/discord.svg');
+	}
+
+	.twitter {
+		background-image: url('./../../assets/images/icons/twitter.svg');
+	}
+}
